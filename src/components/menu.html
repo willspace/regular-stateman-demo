@@ -1,0 +1,13 @@
+<ul class="m-nav">
+  {#list menus as menu}
+  <li class="j-nav f-ripple f-ripple-light {state.is(menu.state)?'z-crt':''}" >
+    <a href="#!{menu.url}">
+      <i class="i-nav {menu.amiclass}"></i>
+      <span>{menu.name}</span>
+    </a>
+  </li>
+  {#if menu.hasendline}
+  <li class="nav_divider"></li>
+  {/if}
+  {/list}
+</ul>

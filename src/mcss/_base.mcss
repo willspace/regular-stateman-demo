@@ -1,0 +1,44 @@
+@abstract '_config.mcss';
+/* reset */
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;outline:none;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:inherit;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:normal;}
+del,ins,u,s,a,a:hover,a:active,a:focus{text-decoration:none;outline:none;}
+body,textarea,input,button,select,keygen,legend{font:$fs12/1.14 $ff-yahei;color:$fc0;outline:0;}
+body{@extend bg-bd;cursor:default;/*$user-select:'none';*/}
+input::-ms-clear,input::-ms-reveal{display:none;}
+a{color:$fc0;}
+button{border:0}
+html, body {width: 100%;height: auto;margin: 0;padding: 0;background: none;font-family: 'Microsoft YaHei','微软雅黑';}
+input {width: 225px;height: 30px;padding-left: 0;color: $fc_black;border: none;font-size: 16px;line-height: 30px;*border: 0;-webkit-tap-highlight-color:rgba(255,255,255,0);}
+input:focus {border: none;outline: none;*border: 0;*outline: 0;}
+a, a:active, a:hover, a:visited {text-decoration: none;}
+.clearboth{clear:both;}
+.f-cf{$clearfix();}
+.f-dn{display:none;}
+/* input reset */
+input::-webkit-input-placeholder {font-weight:normal; color:$fc_placeholder;line-height:1.3em;color:$fc_gray; }
+input::-moz-placeholder { font-weight:normal;color:$fc_placeholder;color:$fc_gray; } /* firefox 19+ */
+input.i-inpt:-ms-input-placeholder {font-weight:normal; color:$fc_placeholder;color:$fc_gray;} /* ie */
+input:-moz-placeholder { font-weight:normal; color:$fc_placeholder;color:$fc_gray;}
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {-webkit-box-shadow: 0 0 0 999px white inset;}
+input::-ms-clear {display: none;}
+input::-ms-reveal {display: none;}
+
+@-webkit-keyframes showAnimation{
+        0%{opacity:0;-webkit-transform:scale3d(0.1,0.1,0.1);transform:scale3d(0.1,0.1,0.1);}
+        80%{opacity:1;-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05);}
+}

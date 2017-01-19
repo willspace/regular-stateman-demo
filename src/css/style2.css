@@ -1,0 +1,19 @@
+.flag{
+    display: block;
+    margin:40px;
+    height:30px;
+    width: 60px;
+    border: solid 4px #ccc;
+}
+.flag.flag-1{
+    background: url(../../res/images/flag-cn.png) no-repeat;
+}
+.flag.flag-2{
+    background: url(../../res/images/flag2.png) no-repeat;
+}
+.flag.flag-3{
+    background: url(../../res/images/flag3.png) no-repeat;
+}
+.flag.flag-4{
+    background: url(../../res/images/flag4.png) no-repeat;
+}

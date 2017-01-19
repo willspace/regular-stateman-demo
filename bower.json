@@ -1,0 +1,21 @@
+{
+  "name": "urs-mg-fe",
+  "authors": [
+    "张威 <wei.zhangwei@corp.netease.com>"
+  ],
+  "description": "urs 服务台 前端",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "regularjs": "^0.5.2",
+    "stateman": "^0.2.0"
+  }
+}

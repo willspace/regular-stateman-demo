@@ -1,0 +1,153 @@
+@abstract '_prefix.mcss';
+/**
+ *  配置信息，在mcss文件顶部用@abstract调用，但不会被解析成css
+ */
+/* 字体 */
+$ff-arial = arial,'simsun';
+$ff-yahei = 'Microsoft YaHei','微软雅黑','宋体',helvetica,'Hiragino Sans GB';
+$ff-simsun = 'simsun',arial;
+
+/* 文字大小 */
+$fs11 = 11px;
+$fs12 = 12px;
+$fs14 = 14px;
+$fs16 = 16px;
+$fs18 = 18px;
+$fs20 = 20px;
+$fs22 = 22px;
+$fs24 = 24px;
+$fs28 = 28px;
+$fs36 = 36px;
+$fs80 = 80px;
+$fs120 = 120px;
+
+/* 文字色 */
+$fc0 =              #D9D9D9;/* 主色1 */
+$fc_white =         #fff;/* 主色2 */
+$fc_red =           #B7272D; /* 按钮红 */
+$fc_red_netease =   #ca5252; /* 网易红 */
+$fc_red_hov =       #e66363; /* 网易红hover */
+$fc_tlt =           #747474; /* 标题颜色 */
+$fc_blue =          #0095ff; /* 蓝-字体 */
+$fc_warn =          #f4950e; /* 警告橙色 */
+$fc_err =           #fa5b5b; /* 错误红色 */
+$fc_gray =          #999999; /* 灰色 */
+$fc_black =         #333333; /* 黑色 */
+$fc_placeholder =   #D9D9D9; /* placeholder颜色 */
+$fc_diz  =          #8dc3ff; /* 按钮不可点击 */
+$fc_btn_diz =       #ccc;    /* 小按钮不可点击 */
+$fc_selecthover =   #efefef;  /* selecthover */
+
+/* 按钮色 */
+$bc_blue =          #41a3e1; /* 安全中心蓝 */
+$bc_blue_hov =      #4cbafe; /* 安全中心蓝:hover */
+$bc_blue_act =      #3a91c7; /* 安全中心蓝:active */
+
+/* 边框色 */
+$bd-normal =        #D0D0D0; /* 输入框默认颜色 */
+$bd-select =        #41a3e1;/* 项目组选中 */
+$bd-item =          #e5e5e5;/* 表单元素边框 */
+$bd_warn =          #f4950e; /* 警告橙色 */
+$bd_err =           #fa5b5b; /* 错误红色 */
+$bd_tlt =           #CECECE; /* 标题边框 */
+
+/* 背景色 */
+$bg_page =              #ffffff; //大背景色
+$bg_index =             #ffffff;  // 首页背景色
+$bg_tlt   =             #ffffff;  // 标题背景色
+$bg_sug    =            #ffffff; // 输入联想背景
+$bg_sug_on =            #333333; // 输入联想选中背景
+
+/* 页面最小宽度 */
+$min-width = 1000px;
+
+$clearfix = {
+    zoom:1;
+    &:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+}
+$inline-block = {display:inline-block;*display:inline;*zoom:1;}
+$yahei = {font-family:$ff-yahei;}
+$simsun = {font-family:$ff-arial;}
+$justify = {text-align:justify;text-justify:inter-ideograph;}
+$nowrap = {word-wrap:normal;white-space:nowrap;}
+$pre = {overflow:hidden;text-align:left;white-space:pre-wrap;word-wrap:break-word;word-break:break-all;}
+$pre-break-word = {white-space:pre-wrap;word-wrap:break-word;word-break:break-all;}
+$break-word = {white-space:normal;word-wrap:break-word;word-break:break-all;}
+$ellipsis = {overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+$opacity = ($oc=0){opacity:$oc;filter:alpha(opacity=round($oc * 100));}
+$hideText = {overflow:hidden;text-indent:-20000px;}
+$scrollY = {overflow:hidden;overflow-y:auto;}
+$scroll = {overflow:auto;overflow-y:auto;}
+$animation = ($keyframes,$time){
+    -webkit-animation:$keyframes $time;
+    -moz-animation:$keyframes $time;
+    -ms-animation:$keyframes $time;
+    -o-animation:$keyframes $time;
+    animation:$keyframes $time;
+}
+$transition = ($property,$time){
+    -webkit-transition:$property $time;
+    -moz-transition:$property $time;
+    -ms-transition:$property $time;
+    -o-transition:$property $time;
+    transition:$property $time;
+}
+$background-radial = ($from,$to){
+    background-image:-webkit-radial-gradient($from,$to);
+    background-image:-moz-radial-gradient($from,$to);
+    background-image:-ms-radial-gradient($from,$to);
+    background-image:-o-radial-gradient($from,$to);
+    background-image:radial-gradient($from,$to);
+}
+$background-linear = ($dir,$from,$to){
+    background-image:-webkit-linear-gradient($dir,$from,$to);
+    background-image:-moz-linear-gradient($dir,$from,$to);
+    background-image:-ms-linear-gradient($dir,$from,$to);
+    background-image:-o-linear-gradient($dir,$from,$to);
+    background-image:linear-gradient($dir,$from,$to);
+}
+$keyframes = ($name, $block){
+    @-webkit-keyframes $name{
+        $block(-webkit-);
+    }
+    @-moz-keyframes $name{
+        $block(-moz-);
+    }
+    @-ms-keyframes $name{
+        $block(-ms-);
+    }
+    @-o-keyframes $name{
+        $block(-o-);
+    }
+    @keyframes $name{
+        $block('');
+    }
+}
+$size = ($width, $height){
+    $height ?= $width;
+    height: $height;
+    width: $width;
+}
+$box-sizing = ($type){
+    -webkit-box-sizing:$type;
+    -moz-box-sizing:$type;
+    box-sizing:$type;
+}
+$shadow = ($color1,$color2){
+    $box-shadow:inset 0 1px 0 $color1,inset 0 2px 0 $color2;
+}
+$shadow-bt = ($color1){
+    $box-shadow:inset 0 -1px 0 $color1;
+}
+$calc = ($num){
+    width: -webkit-calc($num);
+    width: -moz-calc($num);
+    width: calc($num);
+}
+
+/* to be extended */
+$clearfix = {
+    zoom:1;
+    &:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+}
+

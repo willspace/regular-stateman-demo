@@ -1,0 +1,43 @@
+<div class="g-bd">
+  <div class="g-sd">
+    <span class="m-logo"><img src="../../res/images/logo.png"></span>
+    <app-menu menus={menus} state={@(this.$state)}></app-menu>
+  </div>
+
+  <div class="g-mn">
+    <div class="g-top">
+      <div class="m-crumb f-fl">
+        <span class="j-brdText">
+          {this.$state.is("app.index")?"Home":""}
+          {this.$state.is("app.service")?"Service":""}
+          {this.$state.is("app.user")?"User":""}
+        </span>
+      </div>
+      <ul class="m-navmore f-fr">
+        <li class="navmore_user j-nav">
+          <a class="f-ripple" id="auto-id-1484754238176">
+            <img class="j-avatar" src="../../res/images/avatar00.png">
+            <span class="navmore_username j-username f-toe" title="zwwill7">zwwill7</span>
+            <i class="i-icon3 i-icon3-arrow-down"></i>
+            <div class="ripple_effect"></div></a>
+          <ul class="navmore_subnav">
+            <li><a><i class="i-font i-font-man"></i>基本信息</a></li>
+            <li><a><i class="i-font i-font-money"></i>账户消费</a></li>
+            <li><a><i class="i-font i-font-safe"></i>账户安全</a></li>
+            <li><a><i class="i-font i-font-api"></i>Access Key</a></li>
+            <li class="logout"><a class="j-logout"><i class="i-font i-font-logout"></i>退出账号</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="g-ctn" ref=view></div>
+  </div>
+
+  <footer>
+    <p>URS © Copyright 2017</p>
+    <p>{time| format: 'yyyy-MM-dd HH:mm'}</p>
+  </footer>
+
+</div>
+
+

@@ -1,0 +1,18 @@
+@abstract '_config.mcss';
+
+body{ background-color:$bg_page;color:$fc_black;font-size:28px;}
+a{color:$fc_blue;  text-decoration: underline; cursor:pointer;}
+.webpack {
+    background: url(../../res/images/sprite.png) no-repeat center;
+    height:500px;
+}
+.small-webpack {
+    background: url(../../res/images/flag-cn.png) no-repeat center;
+    height:250px;
+}
+
+.web-webpack {
+    background: url(http://img1.imgtn.bdimg.com/it/u=61092371,2557115966&fm=23&gp=0.jpg) no-repeat;
+    background-size:cover;
+    height:250px;
+}
